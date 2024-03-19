@@ -39,7 +39,8 @@ if ingredients_list:
     #st.text(ingredients_list)
     ingredients_string=''
     for each_fruitz_chosen in ingredients_list:
-        ingredients_string+=each_fruitz_chosen + ' '        
+        ingredients_string+=each_fruitz_chosen + ' '    
+        st.subheader(fruit_chosen + "Nutratopm information")
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + each_fruitz_chosen )
         fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
         

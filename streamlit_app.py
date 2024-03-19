@@ -25,9 +25,8 @@ st.write('The name on your smoothie will be:', name_on_order)
 # session = get_active_session() #this is an extra session and no need, cause error which Baily helped me to comments out
 
 my_df=session.table("smoothies.public.fruit_options").select(col("Search_on"))
-# st.dataframe(data=my_dataframe, use_container_width=True)
+st.dataframe(data=my_dataframe, use_container_width=True)
 st.stop()
-
 # ingredients_list=st.multiselect('choose up to 5 ingredients:', my_df)
 
 ingredients_list=st.multiselect('choose up to 5 ingredients:'

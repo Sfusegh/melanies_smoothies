@@ -57,6 +57,6 @@ if ingredients_list:
         st.success('Your smoothie ordered,' + name_on_order + '!', icon="✔")
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/blueberry")
 # st.text(fruityvice_response.json())
 fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)

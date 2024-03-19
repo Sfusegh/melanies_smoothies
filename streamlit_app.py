@@ -22,7 +22,7 @@ st.write(
 name_on_order = st.text_input('name on smoothie:')
 st.write('The name on your smoothie will be:', name_on_order)
 
-# session = get_active_session()
+# session = get_active_session() #this is an extra session and no need, cause error which Baily helped me to comments out
 
 my_df=session.table("smoothies.public.fruit_options").select(col("Fruit_Name"))
 # st.dataframe(data=my_dataframe, use_container_width=True)

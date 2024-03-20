@@ -1,6 +1,7 @@
 # Import python packages
 import streamlit as st
 import requests
+import Pandas 
 from snowflake.snowpark.functions import col
 
 cnx=st.connection("snowflake")
@@ -25,7 +26,10 @@ st.write('The name on your smoothie will be:', name_on_order)
 # session = get_active_session() #this is an extra session and no need, cause error which Baily helped me to comments out
 
 my_df=session.table("smoothies.public.fruit_options").select(col("Search_on"))
-st.dataframe(data=my_df, use_container_width=True)
+# st.dataframe(data=my_df, use_container_width=True)
+# st.stop()
+pd_df=my_dataframe.to_pandas()
+st.dataframe(pd_df)
 st.stop()
 
 # ingredients_list=st.multiselect('choose up to 5 ingredients:', my_df)

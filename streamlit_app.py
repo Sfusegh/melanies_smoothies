@@ -28,7 +28,7 @@ st.write('The name on your smoothie will be:', name_on_order)
 my_df=session.table("smoothies.public.fruit_options").select(col("Search_on"))
 # st.dataframe(data=my_df, use_container_width=True)
 # st.stop()
-pd_df=my_dataframe.to_pandas()
+pd_df=my_df.to_pandas()
 st.dataframe(pd_df)
 st.stop()
 
